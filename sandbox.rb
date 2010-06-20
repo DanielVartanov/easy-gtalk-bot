@@ -2,7 +2,9 @@
 
 require 'easy-gtalk'
 
-bot = GTalk::Bot.new(:email => 'dasher.bot.2@gmail.com', :password => 'botniibet')
+account = Yaml.load('account.yml')
+
+bot = GTalk::Bot.new(account)
 bot.get_online
 
 bot.on_invitation do |inviter|
