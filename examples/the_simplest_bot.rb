@@ -1,16 +1,5 @@
-h1. easy-gtalk-bot
+#!/usr/bin/ruby
 
-A very easy tool for creating Google Talk bots
-
-h2. It's really easy!
-
-h3. Installation
-
-<code>sudo gem install easy-gtalk-bot</code>
-
-h3. Usage
-
-<pre>
 require 'easy-gtalk-bot'
 
 bot = GTalk::Bot.new(:email => "easy.bot@gmail.com", :password => 'sekrit')
@@ -33,22 +22,7 @@ bot.on_message do |from, text|
   bot.message from, "I heard that!"
 end
 
-# Don't be confused with the name of this method. 
+# Don't be confused with the name of this method.
 # We actually keep the current (main) thread alive while letting listener thread to do its job.
 # So we have no need to set up an any infinite loop.
-Thread.stop</pre>
-
-h2. To-do
-
-<code>bot.get_online :invisible => true </code>
-
-<code>bot.set_status :away</code>
-
-<code>GTalk::Account('john.smith@gmail.com').available?</code>
-
-<code>bot.contact_list # => Array</code>
-
-<code>bot.in_contact_list?('john.smith@gmail.com')</code>
-
-
-Copyright © 2010 Daniel Vartanov, released under the MIT license
+Thread.stop
