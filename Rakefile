@@ -7,6 +7,8 @@ begin
     gemspec.email = "dan@vartanov.net"
     gemspec.homepage = "http://github.com/DanielVartanov/easy-gtalk-bot"
     gemspec.authors = ["Daniel Vartanov"]
+
+    gemspec.add_dependency('xmpp4r', '>= 0.5')
   end
 
   Jeweler::GemcutterTasks.new
