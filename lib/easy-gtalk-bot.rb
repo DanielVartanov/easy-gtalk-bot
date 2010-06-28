@@ -3,14 +3,14 @@ require 'openssl'
 require "xmpp4r"
 require 'xmpp4r/roster'
 
-module Jabber
+module JabberExtensions
   module JIDExtensions
     def to_email
       "#{self.node}@#{self.domain}"
     end
   end
 
-  JID.__send__ :include, JIDExtensions
+  Jabber::JID.__send__ :include, JIDExtensions
 end
 
 module GTalk
