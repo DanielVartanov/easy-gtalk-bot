@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "README.textile",
      "Rakefile",
      "VERSION.yml",
+     "easy-gtalk-bot.gemspec",
      "examples/the_simplest_bot.rb",
      "lib/easy-gtalk-bot.rb"
   ]
