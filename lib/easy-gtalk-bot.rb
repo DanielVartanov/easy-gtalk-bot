@@ -27,7 +27,7 @@ module GTalk
       @jabber_client = Client.new(self.jid)
     end
 
-    def get_online(host=nil)
+    def get_online(host="talk.google.com")
       self.jabber_client.connect(host)
       self.jabber_client.auth(self.password)
       self.jabber_client.send(Presence.new.set_type(:available))
